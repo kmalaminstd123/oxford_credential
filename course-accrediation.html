@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- bootstrap cdn -->
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome cdn -->
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- fonts -->
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- loader start -->
+    <div class="main_loader">
+        <div class="loader">
+        <div>
+            <ul>
+            <li>
+                <svg fill="currentColor" viewBox="0 0 90 120">
+                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                </svg>
+            </li>
+            <li>
+                <svg fill="currentColor" viewBox="0 0 90 120">
+                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                </svg>
+            </li>
+            <li>
+                <svg fill="currentColor" viewBox="0 0 90 120">
+                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                </svg>
+            </li>
+            <li>
+                <svg fill="currentColor" viewBox="0 0 90 120">
+                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                </svg>
+            </li>
+            <li>
+                <svg fill="currentColor" viewBox="0 0 90 120">
+                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                </svg>
+            </li>
+            <li>
+                <svg fill="currentColor" viewBox="0 0 90 120">
+                <path d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"></path>
+                </svg>
+            </li>
+            </ul>
+        </div><span>Loading</span></div>
+    </div>
+    <!-- loader end -->
+
+    <input id="js_page_name" value="credential" type="text" hidden>
+
+    <!-- header start -->
+    <header class="fixed-top">
+
+        <div class="container">
+
+            <div class="header_wrap">
+
+                <div class="header_top">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                            <a href="#"><img src="./images/logo.png" alt=""></a>
+                        </div>
+                        <div class="top-icons">
+                            <ul class="d-flex gap-4">
+                                <li><a href="#"><i class="fa-solid fa-phone-volume"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                                <li><a href="mailto:demo@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                            </ul>
+    
+                            
+                        </div>
+                    </div>
+    
+                </div>
+
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="home_nav_link" aria-current="page" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="about_nav_link" href="./about.html">About Us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="accr_nav_link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Accrediation
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./course-accrediation.html">Course Accrediation</a></li>
+                                        <li><a class="dropdown-item" href="./institute-accrediation.html">Institute Accrediation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="cr_nav_link" href="./credential.html">Crediential</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="varify_nav_link" href="./verify.html">Verify</a>
+                                </li>
+                                
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+
+        </div>
+
+    </header>
+    <!-- header end -->
+
+
+
+
+    <!-- page banner start -->
+    <section id="page_banner" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/page_banner_cred.jpg'); height: 300px; width: 100%; background-position: center; background-size: cover; background-repeat: no-repeat;" class="d-flex align-items-center justify-content-center">
+
+        <div class="page_banner_breadCumb d-flex gap-2"><a href="#" class="mb-0">Home</a> <p class="text-white mb-0">/</p> <a href="#">Course Accrediation</a></div>
+        
+    </section>
+    <!-- page banner end -->
+
+
+
+    <!-- benefetis of course accrediation start -->
+    <section id="course_accr_benefits">
+        <div class="course_accr_benefits_bg py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="course-accreditation-content-left">
+                            <h2 class="section-title mb-4">Benefit of Accreditation</h2>
+                            <p class="lead">
+                                Credentials awarded by the BHRC are recognized worldwide, including those awarded to persons by universities, organizations, educational institutions, and training facilities. The most important benefits that an Accredited course will enjoy are:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="course-accreditation-content-right">
+                            <ul class="accreditation-list list-unstyled mb-0">
+                                <li class="d-flex align-items-center gap-3"><span><i class="fa-solid fa-certificate"></i></span> <span>Accredited courses add more value to the certificates than those that are not accredited.</span></li>
+                                <li class="d-flex align-items-center gap-3"><span><i class="fa-solid fa-globe"></i></span> <span>Accredited courses are accepted globally by the corporates.</span></li>
+                                <li class="d-flex align-items-center gap-3"><span><i class="fa-solid fa-shield-halved"></i></span> <span>Accreditation of any course ensures the credibility of the professional certification.</span></li>
+                                <li class="d-flex align-items-center gap-3"><span><i class="fa-solid fa-user-check"></i></span> <span>Accreditation of any course ensures the professional and perfect assessment of competencies.</span></li>
+                                <li class="d-flex align-items-center gap-3"><span><i class="fa-solid fa-arrow-trend-up"></i></span> <span>Accreditation Ensures 10X speed of growth for any course.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- benefetis of course accrediation end -->
+
+
+    <!-- course accrediation process start -->
+    <section id="course_accr_process">
+        <div class="container">
+
+            <div class="section_heading">
+                <h2>Accreditation Process</h2>
+            </div>
+            <div class="section_sub_headin">
+                <p>It is our goal to make this procedure as simple as possible for you to follow and finish. Make sure your legal status is up to date as per the requirement of your country. The process of accreditation is as below:</p>
+            </div>
+
+
+            
+
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container">
+            <div class="course_accr_timeline_v2">
+                <div class="accr_timeline_item">
+                    <div class="timeline-icon">1</div>
+                    <div class="timeline-content">
+                    <h5>Step-1</h5>
+                    <p>Email us <a href="mailto:info@hrboard.uk">info@hrboard.uk</a> to get the application form</p>
+                    </div>
+                </div>
+
+                <div class="accr_timeline_item">
+                    <div class="timeline-icon">2</div>
+                    <div class="timeline-content">
+                    <h5>Step 2</h5>
+                    <p>Fill up the form and submit to us.</p>
+                    </div>
+                </div>
+
+                <div class="accr_timeline_item">
+                    <div class="timeline-icon">3</div>
+                    <div class="timeline-content">
+                    <h5>Step 3</h5>
+                    <p>BHRC accreditation board will review and if required they will communicate</p>
+                    </div>
+                </div>
+
+                <div class="accr_timeline_item">
+                    <div class="timeline-icon">4</div>
+                    <div class="timeline-content">
+                    <h5>Step 4</h5>
+                    <p>Once the BHRC accreditation board is satisfied with the documents and process, they may conduct an on-site or online visit to your site</p>
+                    </div>
+                </div>
+
+                <div class="accr_timeline_item">
+                    <div class="timeline-icon">5</div>
+                    <div class="timeline-content">
+                    <h5>Step 5</h5>
+                    <p>Once the visit is satisfactory BHRC will issue the invoice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="clearfix"></div>
+
+    <!-- course accrediation process end -->
+
+
+    <!-- apply accr section start -->
+    <section id="apply_accr" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/bottom_img.jpg'); width: 100%; padding: 50px 0; background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-sm-12">
+                    <p class="text-white text-md-start text-sm-center" style="font-size: 18px;">Get accredited now, mail us <a href="mailto:info@hrboard.uk" class="text-warning">info@hrboard.uk</a> with your interest. You will receive the accreditation form within 1-2 business days.</p>
+                </div>
+
+                <div class="col-md-6 col-sm-12 text-center">
+                    <a href="#" class="btn text-white myBtn accr_apply_btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- apply accr section end -->
+
+
+    <!-- footer start -->
+    <footer>
+        <div class="container">
+            <div class="footer-top text-center">
+                <p class="mb-0">&copy;<span id="footer_year"></span> Oxford Academy</p>
+            </div>
+            <div class="footer_bottom">
+                <ul class="ps-0 mb-0 mx-auto d-flex justify-content-center gap-3 flex-wrap">
+                    <li><a href="#">Course Accrediation</a></li>
+                    <li><a href="#">Institute Accrediation</a></li>
+                    <li><a href="#">Crediential</a></li>
+                    <li><a href="#">Verify</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- bootstrap cdn -->
+
+    <!-- font awesome cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- font awesome cdn -->
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

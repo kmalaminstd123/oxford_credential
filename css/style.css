@@ -1,0 +1,1140 @@
+/*global css start*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+li {
+    list-style-type: none;
+}
+
+:root {
+    --section-spacing: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.myBtn {
+    background-color: #1E3C81;
+    border-radius: 40px;
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid #1E3C81;
+    transition: all 0.3s linear;
+}
+
+.myBtn:hover {
+    border: 1px solid #1E3C81 !important;
+    background-color: #fff;
+    color: #1E3C81 !important;
+    transition: all 0.3s linear;
+}
+
+
+
+/*global css end*/
+
+/* loader css start */
+
+.main_loader{
+    height: 100dvh;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.loader {
+  --background: linear-gradient(135deg, #23C4F8, #275EFE);
+  --shadow: rgba(39, 94, 254, 0.28);
+  --text: #6C7486;
+  --page: rgba(255, 255, 255, 0.36);
+  --page-fold: rgba(255, 255, 255, 0.52);
+  --duration: 3s;
+  width: 200px;
+  height: 140px;
+  position: relative;
+}
+
+.loader:before, .loader:after {
+  --r: -6deg;
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  width: 120px;
+  top: 80%;
+  box-shadow: 0 16px 12px var(--shadow);
+  transform: rotate(var(--r));
+}
+
+.loader:before {
+  left: 4px;
+}
+
+.loader:after {
+  --r: 6deg;
+  right: 4px;
+}
+
+.loader div {
+  width: 100%;
+  height: 100%;
+  border-radius: 13px;
+  position: relative;
+  z-index: 1;
+  perspective: 600px;
+  box-shadow: 0 4px 6px var(--shadow);
+  background-image: var(--background);
+}
+
+.loader div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.loader div ul li {
+  --r: 180deg;
+  --o: 0;
+  --c: var(--page);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform-origin: 100% 50%;
+  color: var(--c);
+  opacity: var(--o);
+  transform: rotateY(var(--r));
+  -webkit-animation: var(--duration) ease infinite;
+  animation: var(--duration) ease infinite;
+}
+
+.loader div ul li:nth-child(2) {
+  --c: var(--page-fold);
+  -webkit-animation-name: page-2;
+  animation-name: page-2;
+}
+
+.loader div ul li:nth-child(3) {
+  --c: var(--page-fold);
+  -webkit-animation-name: page-3;
+  animation-name: page-3;
+}
+
+.loader div ul li:nth-child(4) {
+  --c: var(--page-fold);
+  -webkit-animation-name: page-4;
+  animation-name: page-4;
+}
+
+.loader div ul li:nth-child(5) {
+  --c: var(--page-fold);
+  -webkit-animation-name: page-5;
+  animation-name: page-5;
+}
+
+.loader div ul li svg {
+  width: 90px;
+  height: 120px;
+  display: block;
+}
+
+.loader div ul li:first-child {
+  --r: 0deg;
+  --o: 1;
+}
+
+.loader div ul li:last-child {
+  --o: 1;
+}
+
+.loader span {
+  display: block;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text);
+}
+
+@keyframes page-2 {
+  0% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  35%, 100% {
+    opacity: 0;
+  }
+
+  50%, 100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes page-3 {
+  15% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  50%, 100% {
+    opacity: 0;
+  }
+
+  65%, 100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes page-4 {
+  30% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  65%, 100% {
+    opacity: 0;
+  }
+
+  80%, 100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes page-5 {
+  45% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  80%, 100% {
+    opacity: 0;
+  }
+
+  95%, 100% {
+    transform: rotateY(0deg);
+  }
+}
+
+
+/* loader css end */
+
+/* ===================== homepage start ===================== */
+
+/* header css start */
+
+header {
+    transition: all 0.3s linear;
+}
+
+header.active {
+    background-color: #1E3C81;
+    transition: all 0.3s linear;
+}
+
+header.header_bg {
+    background-color: #1E3C81;
+    transition: all 0.3s linear;
+}
+
+.header_wrap {
+    border-bottom: 1px solid #fff;
+}
+
+.header_top ul li a {
+    color: #fff;
+    display: block;
+    font-size: 21px;
+}
+
+
+.logo {
+    width: 130px;
+    transition: all 0.3s linear;
+}
+
+header.active .logo {
+    width: 100px;
+    transition: all 0.3s linear;
+}
+
+.logo a img {
+    width: 100%;
+    height: auto;
+}
+
+
+.nav-link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.nav-link.active {
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    background-color: #fff;
+}
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus,
+.nav-link.show {
+    color: #fff !important;
+}
+
+.header_wrap .navbar ul li a {
+    position: relative;
+}
+
+.header_wrap .navbar ul li a::before {
+    position: absolute;
+    content: '';
+    background-color: #1E3C81;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -25%;
+    transition: all 0.3s linear;
+}
+
+
+
+
+.header_wrap .navbar ul li a:hover::before {
+    width: 100%;
+    transition: all 0.3s linear;
+}
+
+.nav-link.active::before {
+    width: 100% !important;
+}
+
+/* header css end */
+
+/* home banner start */
+
+#homeBanner {
+    clip-path: ellipse(99% 98% at 50% 0%);
+}
+
+
+.homeBanner_text_content {
+    padding-top: 27%;
+}
+
+.homeBanner_text_content h2 {
+    font-size: 5rem;
+}
+
+
+.scroll_down_btn {
+    border-radius: 100%;
+    border: 2px solid #1E3C81;
+    /* margin-top: 15%; */
+    transition: all 0.3s linear;
+}
+
+.scroll_down_btn:hover {
+    background-color: #1E3C81;
+    transition: all 0.3s linear;
+}
+
+/* home banner end */
+
+/* home about start */
+
+#homeAbout {
+    padding: var(--section-spacing) 0;
+}
+
+#homeAbout .section_heading h2 {
+    position: relative;
+    width: fit-content;
+}
+
+#homeAbout .section_heading h2::before {
+    position: absolute;
+    content: '';
+    background-color: #1E3C81;
+    height: 2px;
+    width: 150px;
+    right: 105%;
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+
+#homeAbout .section_heading h2::after {
+    position: absolute;
+    content: '';
+    background-color: #1E3C81;
+    height: 2px;
+    width: 150px;
+    left: 105%;
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+
+.home_about_cont {
+    text-align: center;
+    max-width: 768px;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.home_about_cont h1 {
+    color: #1E3C81;
+    font-weight: 500;
+}
+
+/* home about end */
+
+
+/* page banner css start */
+
+#page_banner {
+    margin-top: 188px;
+}
+
+.page_banner_breadCumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+
+.page_banner_breadCumb a {
+    color: #fff;
+    transition: all 0.3s linear;
+}
+
+.page_banner_breadCumb a:hover {
+    color: #000;
+    transition: all 0.3s linear;
+}
+
+/* page banner css end */
+
+/* home stat start */
+
+.h_stat_card{
+    text-align: center;
+    color: #fff;
+}
+
+.h_stat_card .stc_img{
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.h_stat_card .stc_img img{
+    height: 100%;
+    width: auto;
+}
+
+.stc_num h5{
+    font-size: 30px;
+}
+
+/* home stat end */
+
+#home_text{
+    margin: var(--section-spacing) 0;
+    padding: var(--section-spacing) 0;
+}
+
+/* home testimonial start */
+
+#home_testimonial{
+    margin: var(--section-spacing) 0;
+}
+
+/* Swiper Slide Card Design for Testimonials */
+
+.ht_swiper{
+    max-width: 768px;
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#home_testimonial .swiper-slide {
+    background: linear-gradient(135deg, #f5f8ff 60%, #eaf0fb 100%);
+    border-radius: 22px;
+    box-shadow: 0 4px 24px rgba(30, 60, 129, 0.10);
+    padding: 32px 24px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    transition: box-shadow 0.18s, transform 0.18s;
+}
+
+#home_testimonial .swiper-slide:hover {
+    box-shadow: 0 8px 32px rgba(30, 60, 129, 0.16);
+    transform: translateY(-6px) scale(1.03);
+}
+
+#home_testimonial .ht_name h5 {
+    color: #1E3C81;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+#home_testimonial .ht_text p {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#home_testimonial .swiper-pagination{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    top: 100%;
+}
+
+#home_testimonial .swiper-pagination-current{
+    font-size: 20px;
+}
+
+/* home testimonial end */
+
+
+/* ===================== homepage end ===================== */
+
+
+/* ===================== about page start ===================== */
+
+#about_content{
+    margin: var(--section-spacing) 0;
+}
+
+.about_content_buttons{
+    position: sticky;
+    top: 180px;
+}
+
+.about_content_buttons ul li a{
+    background-color: #A8A9AD;
+    color: #1E3C81;
+    font-size: 17px;
+    display: block;
+    padding: 9px 10px;
+    font-weight: bold;
+}
+
+.about_content_buttons ul li a:hover{
+    background-color: #1E3C81;
+    color: #fff;
+    transition: all 0.3s linear;
+}
+
+.abt_wel_img{
+    width: 100%;
+    height: 400px;
+}
+
+.abt_wel_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.abt_ms_vs_card{
+    background-color: #f8faff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.abt_ms_vs_card h4{ 
+    font-weight: bold;
+    color: #1E3C81;
+    margin-bottom: 30px;
+}
+
+.abt_ms_vs_card::before{
+    content: '';
+    position: absolute;
+    background-color: #1E3C81;
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: 0;
+    transition: all 0.3s linear;
+}
+
+.abt_ms_vs_card:hover{
+    color: #fff;
+}
+
+.abt_ms_vs_card:hover h4{
+    color: #fff;
+}
+
+.abt_ms_vs_card:hover::before{
+    height: 100%;
+    transition: all 0.3s linear;
+    z-index: -1;
+}
+
+/* ===================== about page end ===================== */
+
+
+
+/* ===================== course accrediation page start ===================== */
+
+.course_accr_benefits_bg {
+    background: linear-gradient(135deg, #f5f8ff 60%, #eaf0fb 100%);
+    border-radius: 32px;
+    /* box-shadow: 0 8px 32px rgba(30, 60, 129, 0.08); */
+    padding: var(--section-spacing) 10px;
+}
+
+.section-title {
+    color: #1E3C81;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.accreditation-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(30, 60, 129, 0.06);
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    color: #1E3C81;
+    transition: box-shadow 0.2s;
+}
+
+.accreditation-list li:last-child {
+    margin-bottom: 0;
+}
+
+.accreditation-list i {
+    color: #1E3C81;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* course accrediation process start */
+
+#course_accr_process {
+    margin: var(--section-spacing) 0;
+    margin-bottom: 30px;
+}
+
+
+/* Timeline Section */
+.course_accr_timeline_v2 {
+    position: relative;
+    padding-left: 30px;
+}
+
+.course_accr_timeline_v2::before {
+    position: absolute;
+    left: 3%;
+    top: 0;
+    content: '';
+    background-color: #1E3C81;
+    height: 100%;
+    width: 2px;
+}
+
+.accr_timeline_item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 30px;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -18px;
+    top: 0;
+    background-color: #1E3C81;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 0 0 4px #e7f1ff;
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content h5 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    margin-bottom: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.accr_apply_btn {
+    padding: 10px 30px;
+}
+
+/* .accr_apply_btn:hover {
+    background-color: #1E3C81;
+    color: #fff; 
+} */
+
+#crd_elg_criteria{
+    margin: var(--section-spacing) 0;
+}
+
+.elg_crit_box{
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.left_crit_box{
+    background-color: #1E3C81;
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-size: 22px;
+}
+
+.right_crit_box p{
+    font-size: 17px;
+}
+
+
+#crd_assesment{
+    margin: var(--section-spacing) 0;
+}
+
+
+#crd_assesment .nav-pills .nav-link {
+    background: #f5f8ff;
+    color: #1E3C81;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid #eaf0fb;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    min-width: 210px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(30,60,129,0.04);
+    text-align: left;
+    padding: 0.75rem 1rem;
+}
+
+#crd_assesment .nav-pills .nav-link.active,
+#crd_assesment .nav-pills .nav-link:focus {
+    background: #1E3C81;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(30,60,129,0.10);
+}
+
+#crd_assesment .nav-pills .nav-link .badge {
+    font-size: 0.85rem;
+    margin-top: 2px;
+    color: #000 !important;
+}
+
+#crd_assesment .tab-content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(30,60,129,0.06);
+    min-height: 160px;
+}
+
+#crd_assesment .tab-pane h5 {
+    font-size: 1.2rem;
+}
+
+.ass_tab_btn:hover{
+    color: #000 !important;
+}
+
+.asses_app{
+    padding: 10px 40px;
+}
+
+/* course accrediation process end */
+
+
+
+/* ===================== course accrediation page end ===================== */
+
+
+
+/* ===================== credential page start here ===================== */
+
+.credential_m_card{
+    background: #f5f8ff;
+    border-radius: 15px;
+    padding: 32px 10px 24px 10px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 420px;
+    position: relative;
+}
+
+.credential_m_card .crd_name h5 a {
+    color: #1E3C81;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 18px;
+    min-height: 48px;
+    line-height: 1.3;
+}
+
+
+.credential_m_card .crd_img{
+    height: 100px;
+    box-shadow: 0 2px 12px rgba(30,60,129,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.credential_m_card .crd_img img{
+    height: 100%;
+    width: auto;
+}
+
+.credential_m_card .crd_price {
+    margin-bottom: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #eaf0fb;
+}
+
+.credential_m_card .crd_price p {
+    
+    color: #1E3C81;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 6px 18px;
+    display: inline-block;
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.credential_m_card .crd_price p span:nth-child(2){
+    font-size: 30px;
+}
+
+.credential_m_card .crd_act {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+
+.credential_m_card .crd_act .btn {
+    background: #1E3C81;
+    color: #fff;
+    padding: 7px 15px;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+}
+
+
+/* ===================== credential page end here ===================== */
+
+
+
+/* ===================== verify page start ===================== */
+
+#accr_verify_form {
+    margin: var(--section-spacing) 0;
+}
+
+#accr_verify_form form {
+    display: flex;
+    max-width: 768px;
+    width: 98%;
+    border: 1px solid #1E3C81;
+}
+
+#accr_verify_form input {
+    --padding: 10px;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+#accr_verify_form form button {
+    background-color: #1E3C81;
+    border-radius: 0;
+    border: 1px solid #1E3C81;
+    color: #fff;
+    padding: 8px 30px;
+}
+
+/* ===================== verify page end ===================== */
+
+
+
+
+/* ===================== credential page start ===================== */
+
+#crd_filter {
+    margin: var(--section-spacing) 0;
+}
+
+.crd_filter_form form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crd_filter_form form input,
+.crd_filter_form select {
+    flex: 1;
+    border-radius: 0;
+    border: 1px solid #1E3C81;
+}
+
+.crd_filter_form button {
+    border-radius: 0;
+}
+
+/* ===================== credential page end ===================== */
+
+
+/* ===================== credential details page start ===================== */
+
+#crd_det_hr {
+    margin: var(--section-spacing) 0;
+}
+
+.crd_det_left_cont {
+    background-color: #1E3C81;
+    padding: 20px;
+    clip-path: polygon(1% 0, 100% 0, 77% 100%, 0% 100%);
+}
+
+.crd_det_left_cont h3 {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.crd_det_left_cont .crd_logo {
+    width: 200px;
+}
+
+.crd_det_left_cont .crd_logo img {
+    width: 100%;
+    height: auto;
+}
+
+.crd_det_right_cont ul li a {
+    color: #000;
+    display: block;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.crd_form_modal_btn {
+    text-align: center;
+    color: #fff !important;
+}
+
+#crd_apply_modal button {
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+.crd-modal-content {
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(30, 60, 129, 0.12);
+    border: none;
+    background: #f8faff;
+}
+
+.crd-modal-form label {
+    font-size: 1rem;
+    color: #1E3C81;
+}
+
+.crd-modal-form .form-control {
+    border-radius: 8px;
+    border: 1px solid #d1e3fa;
+    background: #fff;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.crd-modal-form .form-control:focus {
+    border-color: #1E3C81;
+    box-shadow: 0 0 0 2px #e7f1ff;
+}
+
+.crd-modal-form .btn.myBtn {
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(30, 60, 129, 0.08);
+}
+
+
+#crd_det_introduction,
+#crd_det_objective,
+#crd_det_crd_aim {
+    margin: var(--section-spacing) 0;
+}
+
+#credential-aim .aim-box {
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+#credential-aim .aim-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(30, 60, 129, 0.15);
+}
+
+#credential-aim .text-primary {
+    color: #1E3C81 !important;
+}
+
+#credential-aim .aim-icon {
+    color: #1E3C81;
+}
+
+#credential-aim p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+
+#benefit_crd_certification{
+    margin: var(--section-spacing) 0;
+    transition: background-image 0.4s ease-in-out;
+}
+
+.ben_cert_btn li button{
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+    display: block;
+}
+
+.ben_cert_btn li button:active, .ben_cert_btn li button:focus{
+    border: 0 !important;
+    border-color: transparent !important;
+    outline: none;
+}
+
+.ben_cert_box{
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.ben_cert_box.active{
+    display: block;
+}
+
+
+/* ===================== credential details page end ===================== */
+
+
+
+/* footer start here */
+
+footer {
+    background-color: #131318;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.footer_bottom {
+    margin-top: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+}
+
+/* footer end here */
