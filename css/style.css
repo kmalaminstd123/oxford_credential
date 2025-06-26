@@ -25,7 +25,11 @@ html {
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+}
+
+body{
+    overflow: hidden;
 }
 
 .myBtn {
@@ -58,14 +62,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     top: 0;
     left: 0;
 }
 
-body{
-    overflow: hidden;
-}
+
 
 .loader {
   --background: linear-gradient(135deg, #23C4F8, #275EFE);
@@ -486,6 +489,44 @@ header.active .logo {
     padding: var(--section-spacing) 0;
 }
 
+/* why choose start section */
+
+#why_choose_us .choose_card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(30,60,129,0.07);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+#why_choose_us .choose_card:hover {
+    box-shadow: 0 8px 32px rgba(30,60,129,0.13);
+    transform: translateY(-6px) scale(1.03);
+}
+
+/* why choose start section */
+
+/* featured course start */
+
+#featured_courses .credential_m_card{
+    background-color: #fff;
+}
+
+/* featured course end */
+
+/* success story start */
+
+/* #success_stories .story_card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(30,60,129,0.07);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+#success_stories .story_card:hover {
+    box-shadow: 0 8px 32px rgba(30,60,129,0.13);
+    transform: translateY(-6px) scale(1.03);
+} */
+
+/* success story end */
+
 /* home testimonial start */
 
 #home_testimonial{
@@ -504,32 +545,56 @@ header.active .logo {
 #home_testimonial .swiper-slide {
     background: linear-gradient(135deg, #f5f8ff 60%, #eaf0fb 100%);
     border-radius: 22px;
+    overflow: hidden;
     box-shadow: 0 4px 24px rgba(30, 60, 129, 0.10);
-    padding: 32px 24px 28px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     transition: box-shadow 0.18s, transform 0.18s;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
 }
 
-#home_testimonial .swiper-slide:hover {
-    box-shadow: 0 8px 32px rgba(30, 60, 129, 0.16);
-    transform: translateY(-6px) scale(1.03);
+
+
+#home_testimonial .ht_name {
+    background-color: #1E3C81;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 768px){
+    #home_testimonial .swiper-slide{
+        flex-direction: column;
+    }
+
+    #home_testimonial .ht_name{
+        width: 100%;
+    }
 }
 
 #home_testimonial .ht_name h5 {
-    color: #1E3C81;
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 30px;
     margin-bottom: 14px;
     letter-spacing: 0.5px;
 }
 
+#home_testimonial .ht_text{
+    padding: 20px;
+    flex: 1;
+}
+
 #home_testimonial .ht_text p {
     color: #333;
-    font-size: 1.05rem;
-    line-height: 1.7;
     margin-bottom: 0;
     text-align: center;
 }
@@ -546,6 +611,59 @@ header.active .logo {
 }
 
 /* home testimonial end */
+
+
+.marquee_slider{
+    --ptb: 40px;
+    margin-top: 40px;
+    background-color: #222;
+    padding-top: var(--ptb);
+    padding-bottom: var(--ptb);
+}
+
+.marquee_slider.v1{
+    position: relative;
+    z-index: 22;
+}
+
+.marquee_slider.v2{
+    background-color: #555;
+    transform: rotate(-5deg);
+    margin-top: -70px;
+    /* width: calc(100% + 50px); */
+    margin-left: -20px;
+}
+
+
+.marquee_slider .logo-img{
+    height: 100px;
+}
+
+.marquee_slider .logo-img img{
+    height: 100%;
+}
+
+.swiper-wrapper{
+  -webkit-transition-timing-function:linear!important;
+  transition-timing-function:linear!important; 
+}
+
+.swiper-slide {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 50px;
+}
+
+#partners{
+    margin-bottom: 70px;
+    /* overflow-x: hidden; */
+}
 
 
 /* ===================== homepage end ===================== */

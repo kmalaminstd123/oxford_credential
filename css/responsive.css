@@ -74,6 +74,15 @@
     .img_txt_1{
         margin-top: 20px;
     }
+
+    /* #partners .marquee_slider.v1{
+        margin-right: -22px;
+    } */
+    #partners {
+        overflow: hidden;
+        height: auto;
+        padding-bottom: 24px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -86,7 +95,7 @@
 
     #home_testimonial .swiper-slide {
         padding: 20px 10px 18px 10px;
-        min-height: 200px;
+        min-height: 300px;
         max-width: 95vw;
     }
     #home_testimonial .ht_name h5 {
@@ -95,6 +104,8 @@
     #home_testimonial .ht_text p {
         font-size: 0.97rem;
     }
+
+
 }
 
 @media only screen and (max-width: 540px){

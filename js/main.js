@@ -5,8 +5,27 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     setTimeout(()=>{
         main_loaderElm.style.display = 'none';
-        document.body.style.overflow = 'scroll'
+        document.body.style.overflowY = 'scroll'
     }, 2000)
+
+
+    if(document.querySelector('.marquee_slider')){
+
+        const swiper = new Swiper(".marquee_slider", {
+            spaceBetween: 0,
+            centeredSlides: true,
+            speed: 2000, // smoother marquee feel
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false, // allows autoplay to continue after hover
+            },
+            loop: true,
+            slidesPerView: 'auto',
+            allowTouchMove: false,
+        });
+    }
+
+
 
     // added active class on header
     const header = document.querySelector('header');
