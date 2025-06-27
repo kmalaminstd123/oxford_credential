@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-                        breakpoints: {
+            breakpoints: {
                 0: {
                 slidesPerView: 1,
                 spaceBetween: 20

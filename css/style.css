@@ -610,6 +610,14 @@ header.active .logo {
     font-size: 20px;
 }
 
+/* accr value section start */
+
+#accreditation_value, #accreditation_intro{
+    margin: var(--section-spacing) 0;
+}
+
+/* accr value section end */
+
 /* home testimonial end */
 
 
