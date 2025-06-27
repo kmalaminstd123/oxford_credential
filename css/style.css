@@ -618,6 +618,21 @@ header.active .logo {
 
 /* accr value section end */
 
+/* home question section start */
+
+#home_ques{
+    margin: var(--section-spacing) 0;
+}
+
+#home_ques .home_ques_wrap{
+    background-color: #f5f8ff;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+}
+
+/* home question section end */
+
 /* home testimonial end */
 
 
