@@ -3,15 +3,59 @@ document.addEventListener('DOMContentLoaded', ()=> {
     // loader functionality
     const main_loaderElm = document.querySelector('.main_loader');
 
-    setTimeout(()=>{
-        main_loaderElm.style.display = 'none';
-        document.body.style.overflowY = 'scroll'
-    }, 2000)
+    // setTimeout(()=>{
+    //     main_loaderElm.style.display = 'none';
+    //     document.body.style.overflowY = 'scroll'
+    // }, 2000)
 
+    main_loaderElm.style.display = 'none';
+    document.body.style.overflowY = 'scroll'
 
+    // home feature course swiper slider
+    if(document.querySelector('.home_feat_swiper')){
+        const homeFeatSwiper = new Swiper('.home_feat_swiper', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            clickable: true,
+            loop: true,
+            effect: "coverflow",
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            centeredSlides: true,
+            autoplay: {
+                delay: 4000
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+                        breakpoints: {
+                0: {
+                slidesPerView: 1,
+                spaceBetween: 20
+                },
+                768: {
+                slidesPerView: 2,
+                spaceBetween: 40
+                },
+                1024: {
+                slidesPerView: 3,
+                spaceBetween: 80
+                }
+            }
+        })
+    }
+
+    // marquee slider swiper slider
     if(document.querySelector('.marquee_slider')){
 
-        const swiper = new Swiper(".marquee_slider", {
+        const marqueeSwiper = new Swiper(".marquee_slider", {
             spaceBetween: 0,
             centeredSlides: true,
             speed: 2000, // smoother marquee feel

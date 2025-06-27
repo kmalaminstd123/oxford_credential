@@ -666,6 +666,16 @@ header.active .logo {
 }
 
 
+/* join us form */
+
+.join_form_card{
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* join us form */
+
+
 /* ===================== homepage end ===================== */
 
 
