@@ -1213,7 +1213,7 @@ header.active .logo {
     margin: var(--section-spacing) 0;
 }
 
-.crd_filter_form form {
+/* .crd_filter_form form {
     display: flex;
     flex-wrap: wrap;
 }
@@ -1227,6 +1227,49 @@ header.active .logo {
 
 .crd_filter_form button {
     border-radius: 0;
+} */
+
+
+
+
+
+#crd_filter {
+    background: #f5f8ff;
+}
+.crd_filter_card {
+    border-radius: 22px;
+    box-shadow: 0 4px 24px rgba(30,60,129,0.08);
+    background: #fff;
+}
+#crd_filter .form-label {
+    color: #1E3C81;
+    font-weight: 600;
+}
+#crd_filter .form-control,
+#crd_filter .form-select {
+    border-radius: 12px;
+    border: 1px solid #d1e3fa;
+    background: #f8faff;
+    font-size: 1rem;
+}
+#crd_filter .form-control:focus,
+#crd_filter .form-select:focus {
+    border-color: #1E3C81;
+    box-shadow: 0 0 0 2px #e7f1ff;
+}
+#crd_filter .myBtn {
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 10px 40px;
+}
+@media (max-width: 767px) {
+    .crd_filter_card {
+        padding: 1.2rem !important;
+    }
+    #crd_filter .row.g-3 {
+        gap: 0.5rem 0 !important;
+    }
 }
 
 /* ===================== credential page end ===================== */
