@@ -504,6 +504,62 @@ header.active .logo {
 
 /* why choose start section */
 
+
+/* Vertical Timeline for Learning Journey */
+
+#learning_journey{
+    background-color: #f5f8ff;
+    padding: var(--section-spacing) 0;
+}
+
+#learning_journey .vertical-timeline {
+    position: relative;
+    margin-left: 30px;
+}
+#learning_journey .vtimeline-step {
+    position: relative;
+    min-height: 90px;
+}
+#learning_journey .vtimeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 40px;
+}
+#learning_journey .vtimeline-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(30,60,129,0.10);
+}
+#learning_journey .vtimeline-line {
+    flex: 1 1 auto;
+    width: 4px;
+    background: linear-gradient(180deg, #eaf0fb 60%, #d1e3fa 100%);
+    margin-top: 2px;
+    margin-bottom: -2px;
+    min-height: 50px;
+    z-index: 1;
+}
+#learning_journey .vtimeline-content {
+    padding-top: 6px;
+    padding-bottom: 24px;
+}
+@media (max-width: 767px) {
+    #learning_journey .vertical-timeline {
+        margin-left: 0;
+    }
+    #learning_journey .vtimeline-content {
+        padding-bottom: 32px;
+    }
+}
+
 /* featured course start */
 
 #featured_courses .credential_m_card{
@@ -969,6 +1025,60 @@ header.active .logo {
 
 .asses_app{
     padding: 10px 40px;
+}
+
+#who_should_apply{
+    margin: var(--section-spacing) 0;
+    padding: var(--section-spacing) 0;
+}
+
+#who_should_apply .apply_card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(30,60,129,0.07);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+#who_should_apply .apply_card:hover {
+    box-shadow: 0 8px 32px rgba(30,60,129,0.13);
+    transform: translateY(-6px) scale(1.03);
+}
+#who_should_apply i {
+    background: #eaf0fb;
+    border-radius: 50%;
+    padding: 18px;
+    margin-bottom: 10px;
+}
+
+
+/* FAQ Section */
+
+#accr_faq{
+    margin: var(--section-spacing) 0;
+}
+
+#accr_faq .accordion-item {
+    background: #fff;
+    border-radius: 18px !important;
+    box-shadow: 0 2px 16px rgba(30,60,129,0.07);
+    border: none;
+}
+#accr_faq .accordion-button {
+    background: #f5f8ff;
+    color: #1E3C81;
+    border-radius: 18px !important;
+    font-weight: 600;
+    font-size: 1.07rem;
+    transition: background 0.2s, color 0.2s;
+}
+#accr_faq .accordion-button:not(.collapsed) {
+    background: #1E3C81;
+    color: #fff;
+}
+#accr_faq .accordion-body {
+    color: #444;
+    font-size: 1rem;
+    background: #fff;
+    border-radius: 0 0 18px 18px;
 }
 
 /* course accrediation process end */

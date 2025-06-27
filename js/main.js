@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     if(document.querySelector('.home_feat_swiper')){
         const homeFeatSwiper = new Swiper('.home_feat_swiper', {
             slidesPerView: 3,
-            spaceBetween: 30,
+            // spaceBetween: 30,
             clickable: true,
             loop: true,
             effect: "coverflow",
