@@ -52,6 +52,26 @@ body {
 
 /*global css end*/
 
+/* back to top button design start */
+
+.back_to_top{
+    background-color: #1e3c72;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 999;
+    --space: 70px;
+    bottom: var(--space);
+    right: var(--space);
+    border: none;
+    color: #fff;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    display: none;
+}
+
+/* back to top button design end */
+
 /* loader css start */
 
 .main_loader {

@@ -315,4 +315,30 @@ document.addEventListener('DOMContentLoaded', ()=> {
         });
 
 
+
+
+    // ============================== back to top functionality ==============================
+
+    const backToTopBtnElm = document.querySelector('.back_to_top')
+
+    window.addEventListener('scroll', e=> {
+        if(this.scrollY > 100){
+            backToTopBtnElm.style.display = 'block'
+        }else{
+            backToTopBtnElm.style.display = 'none'
+        }
+        
+    })
+
+    if(backToTopBtnElm){
+        backToTopBtnElm.addEventListener('click', ()=>{
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+    }
+
+
+
 })
