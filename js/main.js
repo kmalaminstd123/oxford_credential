@@ -287,12 +287,16 @@ document.addEventListener('DOMContentLoaded', ()=> {
         }
 
         // Add click handlers for CTA buttons
-        document.querySelector('.btn-primary-cta').addEventListener('click', function(e) {
-            e.preventDefault();
-            recommendPath();
-        });
+        if(document.querySelector('.btn-primary-cta')){
+
+            document.querySelector('.btn-primary-cta').addEventListener('click', function(e) {
+                e.preventDefault();
+                recommendPath();
+            });
+        }
 
         // Add ripple effect to buttons
+        
         document.querySelectorAll('.btn-explore, .btn-primary-cta').forEach(button => {
             button.addEventListener('click', function(e) {
                 const ripple = document.createElement('span');
