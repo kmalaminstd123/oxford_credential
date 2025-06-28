@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     }
 
     // Set up Intersection Observer
-    const observer = new IntersectionObserver((entries, observer) => {
+    const statObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
             const counters = entry.target.querySelectorAll('.stat_counter');
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     // Observe the stats section
     const section = document.getElementById('home_stats');
 
-    section && observer.observe(section);
+    section && statObserver.observe(section);
 
     // home testimonial swiper
     if(document.querySelector('.ht_swiper')){
@@ -218,5 +218,101 @@ document.addEventListener('DOMContentLoaded', ()=> {
             // },
         })
     }
+
+
+
+    // ===================== learning path js
+            // Interactive path cards
+        document.querySelectorAll('.path-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Remove active class from all cards
+                document.querySelectorAll('.path-card').forEach(c => c.classList.remove('active'));
+                // Add active class to hovered card
+                this.classList.add('active');
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Animate cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.path-card');
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = `all 0.6s ease ${index * 0.2}s`;
+                observer.observe(card);
+            });
+        });
+
+        // Parallax effect for floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.floating-element');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.3 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
+            });
+        });
+
+        // Path recommendation system (mock)
+        function recommendPath() {
+            const paths = ['tech', 'business', 'design', 'security'];
+            const randomPath = paths[Math.floor(Math.random() * paths.length)];
+            const pathCard = document.querySelector(`[data-path="${randomPath}"]`);
+            
+            // Highlight recommended path
+            document.querySelectorAll('.path-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            pathCard.classList.add('active');
+            
+            // Scroll to recommended path
+            pathCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Add click handlers for CTA buttons
+        document.querySelector('.btn-primary-cta').addEventListener('click', function(e) {
+            e.preventDefault();
+            recommendPath();
+        });
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('.btn-explore, .btn-primary-cta').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
 
 })
