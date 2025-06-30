@@ -156,12 +156,23 @@
 
 
     <!-- verify form start -->
-    <section id="accr_verify_form">
+    <section id="accr_verify_form" class="py-4" style="background: #f5f8ff;">
         <div class="container">
-            <form action="" class="mx-auto">
-                <input type="text" class="form-control rounded-0" placeholder="accrediation number">
-                <button class="btn">Verify</button>
-            </form>
+            <div class="verify_form_card mx-auto p-4 rounded-4 shadow-sm bg-white" style="max-width: 500px;">
+                <form class="row g-3 align-items-end">
+                    <div class="col-12">
+                        <label for="verify_number" class="form-label fw-semibold text-primary">
+                            <i class="fa-solid fa-shield-halved me-1"></i> Credential Number
+                        </label>
+                        <input type="text" class="form-control" id="verify_number" placeholder="Enter credential number">
+                    </div>
+                    <div class="col-12 d-grid">
+                        <button class="btn myBtn" type="submit">
+                            <i class="fa-solid fa-magnifying-glass me-1"></i> Verify
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
     <!-- verify form end -->

@@ -1584,25 +1584,35 @@ header.active .logo {
     margin: var(--section-spacing) 0;
 }
 
-#accr_verify_form form {
-    display: flex;
-    max-width: 768px;
-    width: 98%;
-    border: 1px solid #1E3C81;
-}
 
-#accr_verify_form input {
-    --padding: 10px;
-    padding-top: var(--padding);
-    padding-bottom: var(--padding);
-}
 
-#accr_verify_form form button {
-    background-color: #1E3C81;
-    border-radius: 0;
-    border: 1px solid #1E3C81;
-    color: #fff;
-    padding: 8px 30px;
+
+
+
+#accr_verify_form .verify_form_card {
+    border-radius: 22px;
+    box-shadow: 0 4px 24px rgba(30,60,129,0.08);
+    background: #fff;
+}
+#accr_verify_form .form-label {
+    color: #1E3C81;
+    font-weight: 600;
+}
+#accr_verify_form .form-control {
+    border-radius: 12px;
+    border: 1px solid #d1e3fa;
+    background: #f8faff;
+    font-size: 1rem;
+}
+#accr_verify_form .form-control:focus {
+    border-color: #1E3C81;
+    box-shadow: 0 0 0 2px #e7f1ff;
+}
+#accr_verify_form .myBtn {
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 10px 0;
 }
 
 /* ===================== verify page end ===================== */
